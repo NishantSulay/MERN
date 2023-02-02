@@ -41,7 +41,7 @@ export const getPosts = async (req, res) => {
     }
 };
 
-export const getUserPost = async (req, res) => {
+export const getUserPosts = async (req, res) => {
     try{
         const posts = await Post.find({userId: req.params.id});
         res.status(200).json(posts);
